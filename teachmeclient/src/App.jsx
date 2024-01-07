@@ -2,9 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import DrugsView from './components/Drug/DrugsView';
+import MainPage from './components/Main/MainPage';
 import OrelDamtiPage from './components/Prescription/PrescriptionsView';
-import DrugEditPage from './components/Drug/DrugEditPage';
+import DrugEditPage from './components/Main/DrugEditPage';
 import TeacherPage from './components/Teacher/TeacherPage';
 import LoginPage from './components/Login/LoginPage';
 import TeacherProfile from './components/AddProfile/TeacherProfile';
@@ -19,7 +19,7 @@ const App = () => {
                     path="/"
                     element={
                         <Layout defaultPage="drugs">
-                            <DrugsView />
+                            <MainPage />
                         </Layout>
 
                     }
