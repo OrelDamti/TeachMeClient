@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+//import './TeacherProfile.css';
 
 const TeacherProfile = () => {
     const [formData, setFormData] = useState({

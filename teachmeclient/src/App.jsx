@@ -6,6 +6,7 @@ import MainPage from './components/Main/MainPage';
 import OrelDamtiPage from './components/Prescription/PrescriptionsView';
 import DrugEditPage from './components/Main/DrugEditPage';
 import TeacherPage from './components/Teacher/TeacherPage';
+import LoginSignup from './components/Login/LoginSignup';
 import LoginPage from './components/Login/LoginPage';
 import TeacherProfile from './components/AddProfile/TeacherProfile';
 import PupilProfile from './components/AddProfile/PupilProfile';
@@ -18,14 +19,14 @@ const App = () => {
                 <Route
                     path="/"
                     element={
-                        <Layout defaultPage="drugs">
+                        <Layout defaultPage="main">
                             <MainPage />
                         </Layout>
 
                     }
                 />
                 <Route
-                    path="/drugs/edit/:index"
+                    path="/main/edit/:index"
                     element={
                         <Layout defaultPage="drugs">
                             <DrugEditPage />
@@ -52,7 +53,7 @@ const App = () => {
                     path="/AddProfile"
                     element={
                         <Layout defaultPage="AddProfile">
-                            <TeacherPage />
+                            <LoginSignup />
                         </Layout>
                     }
                 />
@@ -74,11 +75,7 @@ const App = () => {
                 />
                 <Route
                     path="/PupilProfile"
-                    element={
-                        <Layout defaultPage="PupilProfile">
-                            <PupilProfile />
-                        </Layout>
-                    }
+                    element={<Layout defaultPage="PupilProfile"> <PupilProfile /> </Layout>}
                 />
             </Routes>
         </Router>
